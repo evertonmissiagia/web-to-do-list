@@ -5,9 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="styles/style.css">
+    
     <title>Home</title>
 </head>
 <body>
+    <header></header>
     
+    <main class="main">
+        <section class="main__form">
+            
+            <div class="main__form__title">
+                <h1>To-do List</h1>
+            </div>
+
+            <div class="main__form__content">
+                <form><input class="main__form__input" id="input-item" type="text" placeholder="O que você quer fazer hoje?"></form>
+                <button class="main__form__button" id="adicionar-item" type="button">Adicionar</button>
+            </div>
+
+                <ul class="main__form__list" id="lista-de-compras">
+                    <li>Be awesome!</li>
+                </ul>
+        </section>
+    </main>
+    
+    <footer></footer>
+    <script src="app.js"></script>
+    <!-- The JS script entry is always at the bottom of the document because the browser needs to load all the HTML and CSS first. -->
 </body>
 </html>
