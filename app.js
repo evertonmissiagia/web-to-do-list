@@ -29,5 +29,26 @@ botaoAdd.addEventListener("click",  (evento) => {
 
     itemDaLista.appendChild(containerItemDalista); // Adiciona a div criada (e seus filhos) dentro do elemento "li" criado.
 
+    const diaDaSemana = new Date().toLocaleDateString("pt-BR", {weekday: "long"});
+    const diaMesAno = new Date().toLocaleDateString("pt-BR")
+    const horaInfo = new Date().toLocaleTimeString("pt-BR", {hour: "numeric", minute: "numeric"});
+    const dataCompleta = `${diaDaSemana}, ${diaMesAno}, às ${horaInfo}`;
+    
+    const horaParagrafo = document.createElement("p")
+    horaParagrafo.innerHTML = dataCompleta;
+    itemDaLista.appendChild(horaParagrafo);
+
     toDoList.appendChild(itemDaLista); // Adiciona o item de lista com todos os filhos à lista principal.
+
+inputCheckbox.addEventListener("click", function (){
+    if (inputCheckbox.checked) {
+        listTarefa.style.textDecoration = "line-through";
+        horaParagrafo.style.textDecoration = "line-through"
+        } else {
+            listTarefa.style.textDecoration = "none";
+            horaParagrafo.style.textDecoration = "none";
+        }
+    }
+);
+
 });

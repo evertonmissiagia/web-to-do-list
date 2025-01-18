@@ -22,7 +22,7 @@ body {
     align-items: center;
     background-color: #F9F3E5;
     font-family: "Patrick Hand", serif;
-    font-weight: 700;
+    font-weight: 500;
     box-shadow: 20px 20px 5px black;
 
     border-radius: 30px;
@@ -30,6 +30,9 @@ body {
 
     width: 600px;
     height: 800px;
+
+    overflow-y: auto; /* Habilita a rolagem vertical se o conteúdo ultrapassar a altura */
+    overflow-x: hidden; /* Esconde qualquer rolagem horizontal */
 }
 
 .main__form__title {
@@ -82,11 +85,15 @@ body {
     font-family: "Patrick Hand", serif;
     font-size: 1.6em;
     font-weight: 500;
-    padding-left: 8%;
+    padding-left: 5%;
+    padding-right: 5%;
 }
 
 .list__item {
     display: flex;
     flex-direction: row;
     gap: 8px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: pre-wrap; /* Garante que quebras de linha sejam respeitadas */
 }
